@@ -1,0 +1,209 @@
+body{
+background-color: rgb(63, 60, 60);
+margin: 0;
+font-family: 'Cinzel Decorative', cursive;
+display: grid;
+grid-template-columns: repeat(15, 1fr);
+grid-template-rows: repeat(10, 1fr);
+/* height: 20vh; */
+}
+/* Header style */
+
+header{
+display: flex;
+flex-direction: row;
+gap:15%;
+text-align: center;
+position: fixed;
+background-color: gray;
+width:100%;
+z-index: 2;
+
+}
+#logo{
+width: 10%;
+height: 100%;
+}
+#listItem1{
+padding-top: 2.5%;
+}
+#listItem2{
+padding-top: 2.5%;
+}
+#listItem3{
+padding-top: 2.5%;
+}
+#listItem4{
+padding-top: 2.5%;
+} 
+a{
+text-decoration: none;
+color: black;
+}
+
+/*Main area*/
+
+#image1{
+background-image: url(images/outdoorImage1.jpg);
+background-position: center;
+color:rgb(255, 255, 255);
+font-size: 2em;
+font-weight: 900;
+text-align: center;
+grid-area: 1 / 1 / span 6 / span 15;
+
+}
+#image1Text{
+margin-top: 10%;
+}
+
+/* Main area buttons */
+#mainPageNext{
+grid-area: 6 / 14 / span 1 / span 1;
+background-image: url(images/nextButton.png);
+background-size:contain;
+background-position: center;
+background-repeat: no-repeat;
+border: none;
+background-color: transparent;
+}
+#mainPageBack{
+grid-area: 6 / 2 / span 1 / span 1;
+background-image: url(images/backButton.webp);
+background-size: contain;
+background-position: center;
+background-repeat: no-repeat;
+background-color: transparent;
+border: none;
+display: none;
+
+}
+
+/* Information area */
+
+#information1{
+grid-area: 8 / 3/ span 2 / span 3;
+background-color: rgb(115, 119, 121);
+text-align: center;
+opacity: .8;
+font-weight: 900;
+border-radius: 30%;
+}
+#information2{
+grid-area: 8 / 7/ span 2 / span 3;
+background-color: rgb(115, 119, 121);
+text-align: center;
+opacity: .8;
+font-weight: 900;
+border-radius: 30%;
+}
+#information3{
+grid-area: 8 / 11/ span 2 / span 3;
+background-color: rgb(115, 119, 121);
+text-align: center;
+opacity: .8;
+font-weight: 900;
+border-radius: 30%;
+}
+#information4{
+grid-area: 11 / 3/ span 2 / span 3;
+background-color: rgb(115, 119, 121);
+text-align: center;
+opacity: .8;
+font-weight: 900;
+border-radius: 30%;
+}
+#information5{
+grid-area: 11 / 7/ span 2 / span 3;
+background-color: rgb(115, 119, 121);
+text-align: center;
+opacity: .8;
+font-weight: 900;
+border-radius: 30%;
+}
+#information6{
+grid-area: 11 / 11/ span 2 / span 3;
+background-color: rgb(115, 119, 121);
+text-align: center;
+opacity: .8;
+font-weight: 900;
+border-radius: 30%;
+}
+.infoContainer{
+grid-area: 7 / 1 / span 7 / span 15;
+background-image: url("images/infobackground.jpg");
+background-size: cover;
+z-index: -1;
+
+}
+
+/* Footer */
+
+#contactDetails{
+grid-area: 14 / 2 / span 1 / span 3;
+}
+.map{
+grid-area: 14 / 9 / span 1 / span 7;
+padding:5%;
+}
+
+/* Dropdown list */
+
+#list{
+display: none;
+background-color: grey;
+text-align: left;    
+}
+
+/*Lets get responsive!*/
+
+@media only screen and (max-width: 600px){
+
+body{
+grid-template-columns: repeat(15, 1fr);
+grid-template-rows: repeat(8, 1fr);}
+
+#image1{        
+grid-area: 1 / 1 / span 3 / span 15;
+}
+
+#mainPageNext{
+display: none;
+}
+
+.infoContainer{
+grid-area: 4 / 1 / span 3 / span 15;
+}
+
+#information1{
+grid-area: 4 / 2/ span 1 / span 6;}
+
+#information2{
+grid-area: 4 / 9/ span 1 / span 6;}
+
+#information3{
+grid-area: 5 / 2/ span 1 / span 6;}
+
+#information4{
+grid-area: 5 / 9/ span 1 / span 6;}
+
+#information5{
+grid-area: 6 / 2/ span 1 / span 6;}
+
+#information6{
+grid-area: 6 / 9/ span 1 / span 6;}
+
+header{ 
+text-align: center;
+display: inline-flex;
+flex-direction: column;
+}
+#logo{
+display: none;
+}
+#contactDetails{
+grid-area: 7 / 2 / span 1 / span 3;
+}
+.map{
+grid-area: 8 / 1 / span 1 / span 2;
+}}
